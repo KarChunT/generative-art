@@ -1,0 +1,61 @@
+name: Delete Art
+
+on:
+  workflow_dispatch:
+    inputs:
+      filenames:
+        description: 'Names of the files to delete (without folder path and file extension) , separated by commas'
+        required: true
+        type: string
+
+concurrency:
+  group: "delete-art-group"
+  cancel-in-progress: false
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  generate_art:
+    runs-on: ubuntu-latest
+    # container:
+    #   image: python:3.13.3-slim-bullseye # no have git installed
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: ./.github/actions/install-python
+
+      - name: Delete Art
+        run: |
+          # Split the filenames input into an array
+          FILENAMES="${{ github.event.inputs.filenames }}"
+          CMD="python src/main.py delete-art"
+          
+          # Loop through each filename and add it as a -f flag
+          IFS=',' read -ra FILE_ARRAY <<< "$FILENAMES"
+          for FILE in "${FILE_ARRAY[@]}"; do
+            CMD="$CMD -f $FILE"
+          done
+
+          echo "Running command: $CMD"
+          eval $CMD
+
+      - name: Generate README
+        run: python src/main.py generate-readme
+
+      - name: Commit and Push Generated Art
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+          # Create a new branch based on the run number
+          # BRANCH_NAME="generated-art-run-${{ github.run_number }}"
+          # git checkout -b $BRANCH_NAME
+
+          git add .
+          git commit -m "art: add generated art on $(date)"
+          git push
+          # git push -u origin $BRANCH_NAME

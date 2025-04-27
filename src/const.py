@@ -1,6 +1,3 @@
-OUTPUT_FOLDER = "output"
-DATA_FOLDER = f"{OUTPUT_FOLDER}/data"
-IMAGES_FOLDER = f"{OUTPUT_FOLDER}/images"
 FORMULA = [
     (
         "random.uniform(-1,1) * x**2  - math.sin(y**2) + abs(y-x)",

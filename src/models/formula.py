@@ -2,6 +2,7 @@ import random
 from const import FORMULA
 
 
+# Formula not stable
 class Formula:
     """
     A class to represent and evaluate mathematical formulas.

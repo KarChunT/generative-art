@@ -18,6 +18,14 @@ on:
   schedule:
     - cron: '0 8 * * *' # Every day at 8 AM
 
+concurrency:
+  group: "art-group"
+  cancel-in-progress: false
+
+permissions:
+  actions: read
+  contents: write
+
 jobs:
   generate_art:
     runs-on: ubuntu-latest

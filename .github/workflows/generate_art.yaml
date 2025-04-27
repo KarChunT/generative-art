@@ -62,7 +62,7 @@ jobs:
 
       - name: Commit and Push Generated Art
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
@@ -74,5 +74,7 @@ jobs:
           git add .
           git commit -m "art: add generated art on $(date)"
 
-          git push origin $BRANCH_NAME
+          # git push origin $BRANCH_NAME
+          # Use the token for authentication
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} $BRANCH_NAME
           # main

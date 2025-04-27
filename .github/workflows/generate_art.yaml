@@ -6,15 +6,18 @@ on:
       singleColor:
         description: 'Use a single color for the art'
         required: false
-        default: 'false'
+        default: false
+        type: boolean
       total:
         description: 'Total number of images to generate'
         required: false
-        default: "1"
+        default: 1
+        type: number
       usingFormula:
         description: 'Use custom formulas for generating art'
         required: false
-        default: 'false'
+        default: false
+        type: boolean
   schedule:
     - cron: '0 8 * * *' # Every day at 8 AM
 
@@ -43,10 +46,14 @@ jobs:
           CMD="python src/main.py generate-art -t ${{ github.event.inputs.total }}"
 
           # Add -s flag if singleColor is false
-          [ "${{ github.event.inputs.singleColor }}" = "true" ] && CMD="$CMD -s"
+          if [ "${{ github.event.inputs.singleColor }}" = "true" ]; then
+            CMD="$CMD -s"
+          fi
           
           # Add -f flag if usingFormula is false
-          [ "${{ github.event.inputs.usingFormula }}" = "true" ] && CMD="$CMD -f"
+          if [ "${{ github.event.inputs.usingFormula }}" = "true" ]; then
+            CMD="$CMD -f"
+          fi
 
           echo "Running command: $CMD"
           eval $CMD

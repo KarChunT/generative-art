@@ -43,15 +43,20 @@ jobs:
 
       - name: Generate Art
         run: |
-          CMD="python src/main.py generate-art -t ${{ github.event.inputs.total }}"
+          # Set default values for inputs if not provided
+          TOTAL=${{ github.event.inputs.total || 1 }}
+          SINGLE_COLOR=${{ github.event.inputs.singleColor || 'false' }}
+          USING_FORMULA=${{ github.event.inputs.usingFormula || 'false' }}
+
+          CMD="python src/main.py generate-art -t $TOTAL"
 
           # Add -s flag if singleColor is false
-          if [ "${{ github.event.inputs.singleColor }}" = "true" ]; then
+          if [ "$SINGLE_COLOR" = "true" ]; then
             CMD="$CMD -s"
           fi
           
           # Add -f flag if usingFormula is false
-          if [ "${{ github.event.inputs.usingFormula }}" = "true" ]; then
+          if [ "$USING_FORMULA" = "true" ]; then
             CMD="$CMD -f"
           fi
 

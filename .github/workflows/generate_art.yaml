@@ -1,0 +1,68 @@
+name: Generate Art
+
+on:
+  workflow_dispatch:
+    inputs:
+      singleColor:
+        description: 'Use a single color for the art'
+        required: false
+        default: 'false'
+      total:
+        description: 'Total number of images to generate'
+        required: false
+        default: "1"
+      usingFormula:
+        description: 'Use custom formulas for generating art'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: '0 8 * * *' # Every day at 8 AM
+
+jobs:
+  generate_art:
+    runs-on: ubuntu-latest
+    # container:
+    #   image: python:3.13.3-slim-bullseye # no have git installed
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Generate Art
+        run: |
+          CMD="python src/main.py generate-art -t ${{ github.event.inputs.total }}"
+
+          # Add -s flag if singleColor is false
+          [ "${{ github.event.inputs.singleColor }}" = "true" ] && CMD="$CMD -s"
+          
+          # Add -f flag if usingFormula is false
+          [ "${{ github.event.inputs.usingFormula }}" = "true" ] && CMD="$CMD -f"
+
+          echo "Running command: $CMD"
+          eval $CMD
+
+      - name: Generate README
+        run: python src/main.py generate-readme
+
+      - name: Commit and Push Generated Art
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+          # Create a new branch based on the run number
+          BRANCH_NAME="generated-art-run-${{ github.run_number }}"
+          git checkout -b $BRANCH_NAME
+
+          git add .
+          git commit -m "art: add generated art on $(date)"
+
+          git push origin $BRANCH_NAME
+          # main

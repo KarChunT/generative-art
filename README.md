@@ -1,10 +1,7 @@
 
 <h1 align='center'>Generative Art</h1>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;" align="center">
-  <img src="output/images/5ae5388e-ee25-4382-9f8d-adf3f845081b.webp" alt="5ae5388e-ee25-4382-9f8d-adf3f845081b.webp" width="150">
-  <img src="output/images/2b3cc565-e779-4e5f-b59a-b64aa1e8ae44.webp" alt="2b3cc565-e779-4e5f-b59a-b64aa1e8ae44.webp" width="150">
   <img src="output/images/24deb163-df36-467a-affd-8856088b0966.webp" alt="24deb163-df36-467a-affd-8856088b0966.webp" width="150">
-  <img src="output/images/84a3f119-afbf-40d0-8551-f4aaeecfc71d.webp" alt="84a3f119-afbf-40d0-8551-f4aaeecfc71d.webp" width="150">
   <img src="output/images/f8121acf-e1db-4d84-a9e0-9f459d9789b2.webp" alt="f8121acf-e1db-4d84-a9e0-9f459d9789b2.webp" width="150">
   <img src="output/images/4c47b4ea-9eed-47ad-93e8-ea9b3b68c572.webp" alt="4c47b4ea-9eed-47ad-93e8-ea9b3b68c572.webp" width="150">
   <img src="output/images/8bed1b8d-6f94-40e3-bd74-193af3bd9fdc.webp" alt="8bed1b8d-6f94-40e3-bd74-193af3bd9fdc.webp" width="150">

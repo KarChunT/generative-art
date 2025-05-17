@@ -2,6 +2,7 @@
 <h1 align='center'>Generative Art</h1>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;" align="center">
   <img src="output/images/99673920-7a16-4e30-aced-09d7d94e14fb.webp" alt="99673920-7a16-4e30-aced-09d7d94e14fb.webp" width="150">
+  <img src="output/images/1154c05f-bb47-4ec1-b532-821886d5c242.webp" alt="1154c05f-bb47-4ec1-b532-821886d5c242.webp" width="150">
   <img src="output/images/c22d0b7c-a774-49fe-a6a0-76b0dd77b544.webp" alt="c22d0b7c-a774-49fe-a6a0-76b0dd77b544.webp" width="150">
   <img src="output/images/b8acd087-6a5e-4d91-baf5-873b1c27803d.webp" alt="b8acd087-6a5e-4d91-baf5-873b1c27803d.webp" width="150">
   <img src="output/images/f57d9974-a00c-474d-988e-9fc62e682c37.webp" alt="f57d9974-a00c-474d-988e-9fc62e682c37.webp" width="150">

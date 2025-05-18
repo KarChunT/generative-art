@@ -21,7 +21,6 @@
   <img src="output/images/159e8088-61d0-4d11-83e1-2741e2b940be.webp" alt="159e8088-61d0-4d11-83e1-2741e2b940be.webp" width="150">
   <img src="output/images/ee334dd8-64e8-420c-9317-27223a927002.webp" alt="ee334dd8-64e8-420c-9317-27223a927002.webp" width="150">
   <img src="output/images/7d21b196-dcea-446e-80d7-7fd5fb060d82.webp" alt="7d21b196-dcea-446e-80d7-7fd5fb060d82.webp" width="150">
-  <img src="output/images/1827bdee-e565-437c-bf6b-c30771bff972.webp" alt="1827bdee-e565-437c-bf6b-c30771bff972.webp" width="150">
   <img src="output/images/b918b93b-f73f-4c0a-a048-4377b954558d.webp" alt="b918b93b-f73f-4c0a-a048-4377b954558d.webp" width="150">
   <img src="output/images/8bed1b8d-6f94-40e3-bd74-193af3bd9fdc.webp" alt="8bed1b8d-6f94-40e3-bd74-193af3bd9fdc.webp" width="150">
   <img src="output/images/281ccef6-bd1f-4b65-8273-68de35b26010.webp" alt="281ccef6-bd1f-4b65-8273-68de35b26010.webp" width="150">

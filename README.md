@@ -9,7 +9,6 @@
   <img src="output/images/f57d9974-a00c-474d-988e-9fc62e682c37.webp" alt="f57d9974-a00c-474d-988e-9fc62e682c37.webp" width="150">
   <img src="output/images/9b0bc22b-faea-4e59-b03d-1fb9e63aa9d9.webp" alt="9b0bc22b-faea-4e59-b03d-1fb9e63aa9d9.webp" width="150">
   <img src="output/images/97f1b4d4-925d-4d46-9b5c-0892c565d289.webp" alt="97f1b4d4-925d-4d46-9b5c-0892c565d289.webp" width="150">
-  <img src="output/images/46775c80-3c3b-4409-8c89-16cde5259576.webp" alt="46775c80-3c3b-4409-8c89-16cde5259576.webp" width="150">
   <img src="output/images/d9606b65-055a-4e35-808a-576f10af1463.webp" alt="d9606b65-055a-4e35-808a-576f10af1463.webp" width="150">
   <img src="output/images/6cac8431-d11a-4aba-8c68-c2a72b7bf8b3.webp" alt="6cac8431-d11a-4aba-8c68-c2a72b7bf8b3.webp" width="150">
   <img src="output/images/2cc3a0a8-49c3-4bb6-8343-15378f858a18.webp" alt="2cc3a0a8-49c3-4bb6-8343-15378f858a18.webp" width="150">
